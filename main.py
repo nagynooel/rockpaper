@@ -41,12 +41,21 @@ while loop:
                 print('Unknown command')
 
     round = 0
+    plyscore = 0
+    botscore = 0
 
     while gameloop:
         round += 1
         rounds = int(rounds)
         if round > rounds:
-            print('Finished')
+            if plyscore > botscore:
+                print('\n\n\nCongratulations, you won!\nFinal score: ',plyscore,'-',botscore)
+            elif plyscore == botscore:
+                print("\n\n\nIt's a draw!\nFinal score: ",plyscore,'-',botscore)
+            else:
+                print("\n\n\nYou lost!\nFinal score: ", botscore, '-', plyscore)
+            print('Press enter to go back to the main menu!')
+            input()
             gameloop = False
             continue
         if round == 1:
@@ -93,8 +102,12 @@ while loop:
         print('robot: ', arr[num-1])
         usrnum = arr.index(user) + 1
         if usrnum == num:
+            plyscore += 1
+            botscore += 1
             print('Round draw!')
         elif (usrnum == 1 and num == 3) or (usrnum == 2 and num == 1) or (usrnum == 3 and num == 2):
+            plyscore += 1
             print('Round won!')
         else:
+            botscore += 1
             print('Round lost!')
