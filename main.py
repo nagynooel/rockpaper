@@ -50,10 +50,27 @@ while loop:
             gameloop = False
             continue
         if round == 1:
-            print('First round:')
+            print('First round:',round,'/',rounds)
+        elif round == rounds:
+            ex = input()
+            if ex == 'exit':
+                sys.exit()
+            elif ex == 'stop':
+                gameloop = False
+                validate = False
+                iscont = True
+                continue
+            print('Last round! ',round,'/',rounds)
         else:
-            input()
-            print('Next round:')
+            ex = input()
+            if ex == 'exit':
+                sys.exit()
+            elif ex == 'stop':
+                gameloop = False
+                validate = False
+                iscont = True
+                continue
+            print('Next round:',round,'/',rounds)
         iscont = False
         validate = True
         while validate:
