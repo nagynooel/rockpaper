@@ -1,6 +1,6 @@
 # Rock Paper Scissors Console Game
 
-This console game was created Noel Nagy.
+This console game was created by Noel Nagy.
 You can use this code anywhere you want, but you need to link my github account! (https://github.com/nagynooel)
 
 If you find any bugs in my code or just have questions or recommendations please contact me at nagynooel@gmail.com!
