@@ -1,6 +1,8 @@
 from random import randrange
 import sys
 
+from pip._vendor.six import print_
+
 loop = True
 while loop:
     gameloop = False
@@ -31,6 +33,13 @@ while loop:
                     print('How many rounds would you like to play?')
                     rounds = input()
                     if not rounds.isdigit():
+                        if rounds == "exit":
+                            sys.exit()
+                        elif rounds == "stop":
+                            startloop = False
+                            menuloop = False
+                            mainloop = False
+                            continue
                         print('Please enter an integer!')
                     else:
                         gameloop = True
